@@ -4,6 +4,8 @@
 Homestead.yaml
 Homestead.json
 
+vendor/*
+composer.lock
 
 .DS_Store
 Thumbs.db
