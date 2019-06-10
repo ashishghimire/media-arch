@@ -12,8 +12,18 @@
 	<!-- Web Fonts -->
 	<link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
 
+	<!--Import Google Icon Font-->
+	{{-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> --}}
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald" />
+	<!--=== Style Switcher ===-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+
 	<!-- CSS Global Compulsory -->
 	<link rel="stylesheet" href="{{url('office/assets/plugins/bootstrap/css/bootstrap.min.css')}}">
+	{{-- <link rel="stylesheet" href="{{url('office/assets/plugins/materialize/css/materialize.min.css')}}">	 --}}
 	<link rel="stylesheet" href="{{url('office/assets/css/one.style.css')}}">
 
 	<!-- CSS Footer -->

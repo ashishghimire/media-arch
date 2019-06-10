@@ -21,8 +21,6 @@ class CreateTestimonialRequest extends FormRequest {
 	 */
 	public function rules() {
 		return [
-
-			  return [
         'name' => 'required',
         'description' => 'required',
         	'position'=>'required',
@@ -30,7 +28,5 @@ class CreateTestimonialRequest extends FormRequest {
         	
 
     ];
-			
-		];
 	}
 }

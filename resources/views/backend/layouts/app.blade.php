@@ -21,9 +21,9 @@
 <!-- Check if the language is set to RTL, so apply the RTL layouts -->
     <!-- Otherwise apply the normal LTR layouts -->
 @langRTL
-{{ Html::style(getRtlCss(mix('public/css/backend.css'))) }}
+{{ Html::style(getRtlCss(mix('css/backend.css'))) }}
 @else
-    {{ Html::style(mix('public/css/backend.css')) }}
+    {{ Html::style(mix('css/backend.css')) }}
 @endif
 
 @yield('after-styles')
@@ -71,7 +71,7 @@
 
 <!-- JavaScripts -->
 @yield('before-scripts')
-{{ Html::script(mix('public/js/backend.js')) }}
+{{ Html::script(mix('js/backend.js')) }}
 {{-- <script>
      $("[rel='tooltip']").tooltip();
      $('.titlecaption').hover(

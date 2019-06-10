@@ -4,5 +4,6 @@
 @include('frontend.office.about')
 @include('frontend.office.service')
 @include('frontend.office.news')
-@include('frontend.office.portfolio')
+@include('frontend.office.client')
 @endsection
+

@@ -10,6 +10,9 @@ Route::get('teams', 'FrontendController@team')->name('teams');
 Route::get('portfolio', 'FrontendController@portfolio')->name('portfolio');
 Route::get('service', 'FrontendController@service')->name('service');
 Route::get('news', 'FrontendController@news')->name('news');
+Route::get('singlepagenews/{id}', 'FrontendController@singlepagenews')->name('singlepagenews');
+
+
 Route::get('category/{id}/edit', 'FrontendController@edit')->name('category.edit');
 
 Route::get('showblogbycategory/{id}', 'FrontendController@showblogbycategory');

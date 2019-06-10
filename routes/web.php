@@ -39,3 +39,5 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'admin.', '
 
 	includeRouteFiles(__DIR__ . '/CMS/');
 });
+
+Route::get('/home', 'HomeController@index')->name('home');

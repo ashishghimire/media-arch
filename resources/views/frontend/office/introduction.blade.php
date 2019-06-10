@@ -1,63 +1,40 @@
 <!--Intro Section -->
-	<section id="intro" class="intro-section">
-		<div class="fullscreenbanner-container">
-			<div class="fullscreenbanner">
-				<ul>
-					@foreach($slider as $row)
-					<!-- SLIDE 1 -->
-					<li data-transition="curtain-1" data-slotamount="5" data-masterspeed="700" data-title="Slide 1">
-						<!-- MAIN IMAGE -->
-						<img src="{{url('uploads'.'/'.$row->image)}}" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
-
-						{{-- <!-- LAYERS -->
-						<div class="tp-caption rs-caption-1 sft start"
-						data-x="center"
-						data-hoffset="0"
-						data-y="100"
-						data-speed="800"
-						data-start="2000"
-						data-easing="Back.easeInOut"
-						data-endspeed="300">
-						{{$row->title}}
-						</div> --}}
-{{-- 
-						<!-- LAYER -->
-						<div class="tp-caption rs-caption-2 sft"
-						data-x="center"
-						data-hoffset="0"
-						data-y="200"
-						data-speed="1000"
-						data-start="3000"
-						data-easing="Power4.easeOut"
-						data-endspeed="300"
-						data-endeasing="Power1.easeIn"
-						data-captionhidden="off"
-						style="z-index: 6">
-						{!!$row->description!!}
-						</div> --}}
-
-						<!-- LAYER -->
-						<div class="tp-caption rs-caption-3 sft"
-						data-x="center"
-						data-hoffset="0"
-						data-y="360"
-						data-speed="800"
-						data-start="3500"
-						data-easing="Power4.easeOut"
-						data-endspeed="300"
-						data-endeasing="Power1.easeIn"
-						data-captionhidden="off"
-						style="z-index: 6">
-						{{-- <span class="page-scroll"><a href="#about" class="btn-u btn-brd btn-brd-hover btn-u-light">Learn More</a></span>
-						<span class="page-scroll"><a href="#portfolio" class="btn-u btn-brd btn-brd-hover btn-u-light">Our Work</a></span>
-						</div> --}}
-					</li>
-
-					@endforeach
-				</ul>
-				<div class="tp-bannertimer tp-bottom"></div>
-				<div class="tp-dottedoverlay twoxtwo"></div>
-			</div>
-		</div>
-	</section>
-	<!-- End Intro Section
+{{-- <div class="intro-parallax">
+</div> --}}
+<!-- End Intro Section -->
+<div class="carousel-container">   
+    <div style="height:90.5px"></div>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+    
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+            <img src="{{url('/images/slider/slider01.jpg')}}" alt="Los Angeles" style="width:100%;">
+                <div class="call-button">
+                    Contact Us
+                </div>
+            </div>
+    
+            <div class="item">
+            <img src="{{url('/images/slider/slider02.jpg')}}" alt="Chicago" style="width:100%;">
+                <div class="call-button">
+                    Contact Us
+                </div>
+            </div>
+        
+            <div class="item">
+            <img src="{{url('/images/slider/slider03.jpg')}}" alt="New York" style="width:100%;">
+                <div class="call-button">
+                    Contact Us
+                </div>
+            </div>         
+        </div>
+    </div>
+</div>
+      

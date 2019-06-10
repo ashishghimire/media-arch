@@ -23,7 +23,12 @@ html {
   height: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #555;
 }
 
@@ -103,17 +108,32 @@ a:hover {
   font-weight: 200;
   line-height: 15px;
   padding: 17px 15px 13px;
-  color: #fff !important;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .one-page-header .navbar-brand span {
-  color: #72c02c !important;
+  color: #396eaf;
+  font-weight: bold;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .one-page-header .navbar-brand {
-    padding-left: 0;
+    left: 0;
+    font-size: 18px;
+  }
+
+  .one-page-header .navbar-nav {
+    margin-top: 100px;
+    /* margin: 0px; */
+    padding: 20px;
+    text-align: center;
+    display: block;
+    background: black;
+  }
+
+  .one-page-header .navbar-nav li {
+    color: red;
+    font-weight: bold;
   }
 }
 
@@ -130,14 +150,10 @@ a:hover {
 }
 
 .one-page-header .navbar-toggle .icon-bar {
-  background: #fff;
-}
-
-.one-page-header .navbar-toggle .icon-bar {
   height: 1px;
   width: 25px;
   font-size: 22px;
-  background: #fff;
+  background: black;
   margin-bottom: 7px;
 }
 
@@ -145,45 +161,43 @@ a:hover {
   margin-bottom: 0;
 }
 
-/*Navbar*/
 .one-page-header {
   border-bottom: none;
-  background: rgba(0,0,0,0.4);
 }
+
 .one-page-header .container {
   position: relative;
 }
 
 .one-page-header .navbar-nav > li > a {
-  color: #eee;
   font-size: 12.5px;
   text-transform: uppercase;
   padding: 17px 15px 13px;
 }
 
-.one-page-header .navbar-nav > li > a:before {
-  left: -3px;
-  top: 15px;
-  z-index: 2;
-  color: #eee;
-  font-size: 4px;
-  content: "\f10c";
-  margin-right: 6px;
-  position: absolute;
-  font-family: FontAwesome;
-}
-
-.one-page-header .navbar-nav > li.home > a:before {
+.one-page-header .navbar-nav > li > a:after {
+  background: none repeat scroll 0 0 transparent;
   content: "";
+  bottom: 10px;
+  display: block;
+  height: 2px;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  background: rgb(231, 227, 227);
+  transition: width 0.8s ease 0s;
+  width: 0;
+}
+.one-page-header .navbar-nav > li > a:hover:after {
+  width: 70%;
+  /* left: 16px; */
 }
 
-.one-page-header .navbar-nav > li > a:hover {
-  z-index: 1;
-  color: #72c02c;
-}
-
-.one-page-header .navbar-nav > li > a:focus {
-  color: #fff;
+@media (max-width: 991px) {
+  .one-page-header .navbar-nav > li > a:hover:after {
+    display: none;
+  }
 }
 
 .one-page-header .navbar-nav > .active > a,
@@ -197,7 +211,6 @@ a:hover {
 .one-page-header.top-nav-collapse .dropdown-menu > .active > a:focus {
   z-index: 1;
   background: none;
-  color: #72c02c !important;
 }
 
 /*Responsive Navbar*/
@@ -233,27 +246,25 @@ a:hover {
   }
 
   .navbar-default .navbar-nav > li > a::before {
-    content: '';
+    content: "";
   }
 }
 
-@media(min-width: 992px) {
+.one-page-header {
+  padding: 20px 0;
+}
+
+@media (min-width: 992px) {
   .one-page-header.navbar {
-    padding: 12px 0;
-    -webkit-transition: background .3s ease-in-out,padding .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out,padding .3s ease-in-out;
-    transition: background .3s ease-in-out,padding .3s ease-in-out;
+    background: white;
+    -webkit-transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
   }
 
   .one-page-header.top-nav-collapse {
     /* Customize the look and feel of the collapsed top nav here */
     padding: 7px 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .one-page-header .navbar-nav > li > a:before {
-    content: " ";
   }
 }
 
@@ -265,6 +276,10 @@ a:hover {
   .one-page-header-style-2.navbar .navbar-nav {
     float: left;
     margin-left: 25px;
+  }
+
+  .one-page-header.navbar .navbar-brand div {
+    color: #777 !important;
   }
 }
 
@@ -448,7 +463,7 @@ a:hover {
 }
 @media (max-width: 480px) {
   .top-contact-block {
-/*    position: static;
+    /*    position: static;
     padding: 8px 0 14px;
     text-align: right;*/
     display: none;
@@ -493,7 +508,7 @@ a:hover {
 /* Lang Block */
 .lang-block {
   float: right;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   padding: 6px 13px 4px 13px;
   margin: 10px 0 0 20px;
   font-size: 12.5px;
@@ -518,7 +533,7 @@ a:hover {
   list-style: none;
   padding: 0 13px 5px;
   margin: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   position: absolute;
   left: 0;
   right: 0;
@@ -539,7 +554,7 @@ a:hover {
 @media (max-width: 991px) {
   .lang-block {
     float: none;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     display: inline-block;
     position: absolute;
     top: 0;
@@ -554,8 +569,8 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  .one-page-header.top-nav-collapse {
-    padding: 0;
+  .navbar-brand div {
+    font-size: 12px;
   }
 }
 
@@ -571,7 +586,7 @@ a:hover {
 
 /*Navbar Toggle*/
 .one-page-header.top-nav-collapse .navbar-toggle .icon-bar {
-  background: #555;
+  background: black;
 }
 
 .one-page-header.top-nav-collapse .navbar-toggle:hover .icon-bar {
@@ -594,11 +609,6 @@ a:hover {
 /*About Section
 ------------------------------------*/
 /*About Section*/
-.about-section {
-  padding-top: 40px;
-  padding-bottom: 0;
-}
-
 .block-v1 {
   padding: 50px 0;
 }
@@ -607,7 +617,7 @@ a:hover {
   padding-top: 100px;
 }
 
-/*Icon Lists*/
+/*Content boxes v3*/
 .content-boxes-v3 i.icon-custom {
   margin-right: 8px;
 }
@@ -617,6 +627,16 @@ a:hover {
   margin-bottom: 5px;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.content-boxes-in-v3 span a {
+  color: white;
+  display: inline-block;
+  /* background: #086f95; */
+  background: #396eaf;
+  padding: 5px;
+  border-radius: 2px;
+  text-decoration: none;
 }
 
 /*Style for Cube Portfolio wrapper*/
@@ -642,7 +662,7 @@ a:hover {
   position: relative;
 }
 .backstretch:after {
-  background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 0;
   left: 0;
@@ -712,7 +732,7 @@ a:hover {
 .promo-section h2,
 .promo-text,
 .promo-next {
-  opacity: .9;
+  opacity: 0.9;
 }
 
 @media (max-width: 600px) {
@@ -737,7 +757,7 @@ a:hover {
 }
 .contacts-section2 h2 {
   color: #444;
-  font: 28px "Open Sans",sans-serif;
+  font: 28px "Open Sans", sans-serif;
   margin-bottom: 15px;
   padding-bottom: 15px;
   position: relative;

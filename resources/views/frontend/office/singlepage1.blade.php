@@ -3,7 +3,7 @@
 </br>
 </br>
 </br>
-
+{{-- @include('frontend.office.header2') --}}
 <div class="container content">
 			<div class="row">
 				<div class="col-md-6">

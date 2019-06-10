@@ -1,1 +1,165 @@
-/* Add here all your css styles (customizations) */
+/*[-----*** TABLE OF CONTENT ***-----]
+
+1. Slider CSS
+2. Modal
+3. Service
+*/
+
+/*--------------------------------------------------
+	[1. Slider CSS]
+----------------------------------------------------*/
+
+.carousel-indicators > li.active {
+  background-color: #086f95;
+  border: none;
+}
+
+.carousel-indicators > li {
+  background-color: #fff;
+  font-family: Lato, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 2;
+}
+
+.carousel {
+  position: relative;
+}
+
+.call-button {
+  position: absolute;
+  top: 70%;
+  left: 7.5%;
+  display: block;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Oswald;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 26.4px;
+  /* background-color: #066e95; */
+  /* color: #ffcc00; */
+  background: #ff8b40;
+  color: white;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+  /* border: 2px solid #f4f4f4d8; */
+  border: 2px solid #eedddd;
+}
+
+@media (max-width: 768px) {
+  .call-button {
+    padding: 4px;
+    font-size: 18px;
+  }
+}
+
+/*--------------------------------------------------
+	[2. Modal]
+----------------------------------------------------*/
+
+.modal-content-v1 {
+  /* width: 100%; */
+  /* height: 500px; */
+  border-radius: 4px !important;
+  /* z-index: 1050; */
+}
+
+.modal-content-v2 {
+  width: 100%;
+  height: 400px;
+  border-radius: 0px !important;
+  z-index: 1050;
+}
+
+.team-modal {
+  background-color: #272222d8;
+}
+
+.modal-content-v1 button {
+  padding: 10px 10px 0 0;
+}
+
+.modal-content-v1 img {
+  height: 150px;
+  width: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*--------------------------------------------------
+	[3. Service]
+----------------------------------------------------*/
+
+.service-block:hover .slider-heading {
+  animation: move 2s;
+  -webkit-animation: move 2s;
+  font-size: 18px;
+}
+
+@keyframes move {
+  from {
+    margin-right: 0%;
+    width: 300%;
+  }
+
+  to {
+    margin-right: 0%;
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes move {
+  from {
+    margin-right: 0%;
+    width: 300%;
+  }
+
+  to {
+    margin-right: 0%;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .service-block:hover p {
+    transform: scale(0.9, 0.9);
+    transition: all 0.8s ease-in-out;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-block:hover p {
+    /* text-align: left; */
+    transform: scale(0.8, 0.8);
+    transition: all 0.8s ease-in-out;
+    text-align: left;
+  }
+}
+
+.service-block:hover img {
+  transform: scale(1.2, 1.2);
+  transition: all 0.6s ease-in-out;
+}
+
+.service-block a h2 {
+  /* color: #086f95 !important; */
+  color: #396eaf !important;
+  font-size: 15px;
+  line-height: 4rem;
+  font-weight: bolder;
+}
+
+.service-block:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.service-block a:hover {
+  text-decoration: none;
+}

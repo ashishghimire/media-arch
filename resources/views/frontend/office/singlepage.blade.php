@@ -1,8 +1,8 @@
 @extends('frontend.office.master')
 @section('content')
-</br>
-</br>
-</br>
+<br>
+<br>
+<br>
 
 <div class="container content">
 			<div class="row">

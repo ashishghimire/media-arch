@@ -84,13 +84,15 @@ class FrontendController extends Controller {
 		$featurednews = Blog::where('category_id', '=', 2)->paginate(4);
 		$education1 = Blog::where('category_id', '=', 2);
 		$featurednews1 = Blog::where('category_id', '=', 2)->paginate(4);
-		$breakingnews = Blog::where('category_id', '=', 4)->paginate(4);
+		$breakingnews = Blog::where('category_id', '=', 1)->paginate(4);
 
-		$client = $this->client->inRandomOrder()->take(5)->get();
+		$client = $this->client->get();
 		$team = $this->team->get();
-		$client = $this->client->inRandomOrder()->take(5)->get();
-		$portfolio = $this->portfolio->inRandomOrder()->take(9)->get();
-		$blog1 = $this->blog->inRandomOrder()->take(3)->get();
+		// $client = $this->client->inRandomOrder()->take(5)->get();
+		$portfolio = $this->portfolio->take(9)->get();
+		$blog1 = $this->blog::orderBy('id', 'desc')->take(3)->get();
+
+
 		$ourservice = $this->ourservice->get();
 		$ourservice1 = $this->ourservice->inRandomOrder()->take(3)->get();
 		$about = $this->about->inRandomOrder()->take(3)->get();
@@ -104,8 +106,7 @@ class FrontendController extends Controller {
 		$titledescription6 = $this->titledescription->find(6);
 		$titledescription7 = $this->titledescription->find(7);
 		$titledescription8 = $this->titledescription->find(8);
-		$photo1 = $this->photo->find(1);
-		$photo2 = $this->photo->find(2);
+		$photo2 = $this->photo->find(1);
 		$testimonial = $this->testimonial->take(5)->get();
 
 // //mobile page dispaly
@@ -334,20 +335,22 @@ class FrontendController extends Controller {
 	}
 
 	public function portfolio() {
-
-		$portfolio = $this->portfolio->inRandomOrder()->take(9)->get();
-
+		$portfolio = $this->portfolio->take(9)->get();
 		$titledescription7 = $this->titledescription->find(7);
 		return view('frontend/office/NextPage/portfolio', compact('portfolio', 'titledescription7'));
-
 	}
 
 	public function news() {
 
-		$blog1 = $this->blog->inRandomOrder()->take(3)->get();
+		$blog1 = $this->blog->inRandomOrder()->get();
 		$titledescription6 = $this->titledescription->find(6);
 		return view('frontend/office/NextPage/news', compact('blog1', 'titledescription6'));
 
+	}
+
+	public function singlepagenews($id, Blog $blog) {
+		$data = $blog->findOrFail($id);
+		return view('frontend/office/NextPage/singlepagenews', compact('data'));
 	}
 
 }

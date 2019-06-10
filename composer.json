@@ -16,6 +16,7 @@
     "bosnadev/repositories": " 0.8",
     "creativeorange/gravatar": "~1.0",
     "davejamesmiller/laravel-breadcrumbs": "^3.0",
+    "doctrine/dbal": "^2.9",
     "folklore/image": "^0.3.16",
     "hieu-le/active": "~3.0",
     "laravel/framework": "5.4.*",
