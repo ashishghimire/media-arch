@@ -6,6 +6,7 @@ Homestead.json
 
 vendor/*
 composer.lock
+package.json
 
 .DS_Store
 Thumbs.db
